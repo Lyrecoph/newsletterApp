@@ -1,37 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Newsletter Subscription App
 
-## Getting Started
+Ce projet est une application Next.js permettant aux utilisateurs de s'inscrire à une newsletter en utilisant Mailchimp. Il est conçu avec Tailwind CSS et DaisyUI pour le style, et utilise React Toastify pour afficher les notifications.
 
-First, run the development server:
+![Présentation de l'application](public/imageReadme.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+## 🚀 Technologies utilisées
+
+- **Next.js** – Framework React pour les applications web modernes
+- **TypeScript** – Typage statique pour un code plus robuste
+- **Tailwind CSS** – Framework CSS utilitaire
+- **DaisyUI** – Composants UI basés sur Tailwind CSS
+- **React Toastify** – Notifications utilisateur
+- **Mailchimp API** – Gestion des abonnements à la newsletter
+
+## 📂 Structure du projet
+
+```
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── subscribe/route.ts  # Route API pour l'inscription
+│   │   ├── layout.tsx             # Layout global
+│   │   ├── page.tsx               # Page principale
+│   ├
+│   ├
+│   ├── styles/                     # Fichiers de style globaux
+│   └── tailwind.config.ts          # Configuration Tailwind CSS
+├── public/
+│   └── backNewsletter.jpg         # Image de fond du formulaire
+├── .env                            # Variables d'environnement (non suivi par Git)
+├── README.md                       # Documentation du projet
+├── package.json                     # Dépendances du projet
+└── tsconfig.json                    # Configuration TypeScript
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 Prérequis
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Avant de commencer, assure-toi d'avoir installé :
+- [Node.js](https://nodejs.org/) (v18+ recommandé)
+- Un compte Mailchimp et une clé API
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Installation
 
-## Learn More
+Clone le projet :
+```bash
+git clone https://github.com/Lyrecoph/newsletterApp.git
+cd newsletterApp
+```
 
-To learn more about Next.js, take a look at the following resources:
+Installe les dépendances :
+```bash
+npm install
+# ou
+yarn install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Crée un fichier `.env.local` à la racine du projet et ajoute les variables d'environnement :
+```env
+MAILCHIMP_API_KEY=your-api-key
+MAILCHIMP_API_SERVER=your-server-prefix
+MAILCHIMP_AUDIENCE_ID=your-audience-id
+```
 
-## Deploy on Vercel
+## 🚀 Lancement du projet
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Démarrer le serveur de développement :
+```bash
+npm run dev
+# ou
+yarn dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# newsletterApp
+Le projet sera accessible sur `http://localhost:3000`
+
+## 📡 Déploiement
+
+Tu peux déployer ce projet sur [Vercel](https://vercel.com/) :
+```bash
+npm run build
+npm run start
+```
+
+## 📢 Fonctionnalités
+
+- ✅ Formulaire d'inscription à la newsletter
+- ✅ Envoi des emails via Mailchimp
+- ✅ Notifications avec React Toastify
+- ✅ Interface utilisateur moderne avec DaisyUI
+
+## 🛠 Améliorations possibles
+
+- ✅ Validation avancée des emails
+- ✅ Ajout d'une confirmation d'inscription
+- ✅ Gestion d'erreurs plus détaillée
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues !
+
+1. Fork le projet
+2. Crée une branche : `git checkout -b feature-nom`
+3. Commits tes modifications : `git commit -m 'Ajout d'une nouvelle fonctionnalité'`
+4. Pousse la branche : `git push origin feature-nom`
+5. Ouvre une Pull Request
+
+## 📜 Licence
+
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus d’informations.
+
+---
+
+✨ _N'hésite pas à laisser une étoile ⭐ sur le repo si ce projet t'a aidé !_
+
