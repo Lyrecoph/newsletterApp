@@ -27,9 +27,12 @@ export async function POST(request: Request){
             {status: 201}
         )
         
-    } catch (error) {
+    } catch (error: any) {
         return NextResponse.json(
-            {error: "Cet email existe ou n'existe pas"},
+            {
+                error: error.response?.body?.title || "Une erreur est survenue",
+                details: error.response?.body?.detail || "Cet email existe peut-être déjà ou est invalide."
+            },
             {status: 500}
         )
     }   
